@@ -1,0 +1,223 @@
+/*Geral*/
+*{
+	margin: 0;
+	padding: 0;
+}
+/* Estilos para telas menores que 600px de largura */
+@media (max-width: 600px) {
+	body {
+	  background-color: lightblue;
+	}
+	.container {
+		display: flex; /* Flexbox */
+		flex-wrap: wrap; /* Permite que os itens sejam dispostos em várias linhas */
+	}
+	.item {
+		flex: 1 0 200px; /* Cada item terá no mínimo 200px de largura */
+	}
+	.container {
+		display: grid; /* Grid */
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Cria colunas que se ajustam automaticamente */
+	}
+	body {
+		background-color: #ffffff;
+		display: flex;
+	      }
+	h1{
+		flex: 1 0 100%;
+	}
+	header{
+		flex: 0 0 auto;
+	}
+}
+/* Estilos para o menu */
+.menu {
+	font-family: "PT Serif", serif;
+	font-weight: 400;
+	font-style: normal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(#00000073, #00000000); /* Cor de fundo */
+	padding: 40px 0; /* Espaçamento interno */
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+.menu a {
+	color: #fff; /* Cor do texto */
+	font-size: 20px;
+	text-decoration: none; /* Remover sublinhado */
+	margin: 0 50px; /* Espaçamento entre os itens */
+	display: flex;
+	align-items: center;
+}
+.menu a i {
+	margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+/* Estilos quando passa o mouse sobre os links */
+.menu a:hover {
+	opacity: 0.9; /* Reduzir a opacidade */
+	color: gold;
+}
+/* Estilos para o link ativo */
+.menu a.active {
+	font-weight: bold; /* Negrito para o link ativo */
+}
+/*FIM MENU*/
+/*-----------------------------------------------*/
+/*TITULOS*/
+.title-1{
+	color: #ffd900;
+	font-size: 90px;
+	text-shadow: -8px 0 #4e4545;
+	white-space: nowrap;
+	font-family: "Playfair Display", serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+.detail-title{
+	color: #ffffff;
+	font-size: 50px;
+	text-shadow: 5px 0 #4e4545;
+	white-space: nowrap;
+	font-family: "Playfair Display", serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+.subtitle-1{
+	color: #000000;
+	font-size: 40px;
+	text-shadow: 5px 0 linear-gradient(to right, black, blue);
+	margin-top: 0;
+	padding-top: 5%;
+	white-space: unset;
+	font-family: "PT Serif", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+/*BOTÕES*/
+.btn-action{
+	color: #ffffff;
+	font-family: "Sedan", serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 18px;
+	width: auto;
+	height: 50px;
+	padding: 10px;
+	margin-top: 10px;
+	background-color: #706a6a;
+	border: none;
+}
+.btn-action:hover{
+	background-color: gold;
+	color: #000000;
+	border: none;
+}
+/*IMAGENS*/
+.bloco-info img{
+	width: 30%;
+	height: 30%;
+	border-radius: 50%;
+	border: 10px solid gold;
+	display: block;
+	margin-top: 3%;
+}
+.bloco-info{
+	padding: 5% 10% 10% 10%;
+	display: flex;
+}
+/*PARA TEXTOS*/
+.corpo-texto, .corpo-texto-2, .corpo-texto-3{
+	color: #fff;
+	width: 75%;
+	padding-top: 5%;
+	text-align: justify;
+	display: flex;
+	margin: 0 auto;
+}
+.texto, .texto-3{
+	flex: content; /* Ocupa metade do espaço */
+	color: #ffffff; /* Cor do texto */
+	padding: auto;
+	background-color: #0000005d;
+	border-radius: 20px;
+}  
+.texto-2{
+	flex: content; /* Ocupa metade do espaço */
+	color: #000000; /* Cor do texto */
+	padding: auto;
+	border-radius: 20px;
+}  
+.texto-e{
+	flex: content; /* Ocupa metade do espaço */
+	color: #000000; /* Cor do texto */
+	padding: auto;
+	margin-left: 10%;
+	text-align: justify;
+}
+ul {
+	list-style-type: none; /* Remove o marcador padrão */
+	display: flex; /* Faz com que os itens da lista sejam flexíveis */
+	justify-content: center; /* Centraliza os itens da lista horizontalmente */
+	flex-wrap: wrap; /* Permite que os itens da lista quebrem para a próxima linha se necessário */
+	padding: 0; /* Remove o padding padrão */
+	margin: 0; /* Remove o margin padrão */
+	font-size: 25px;
+	width: 100%;
+}
+ul li {
+	flex: 1 0 50%; /* Define a largura mínima dos itens da lista como 50% da largura total da lista */
+	margin: 5px; /* Adiciona margem ao redor dos itens da lista */
+	text-align: center; /* Centraliza o texto dentro dos itens da lista */
+}
+ul li::before {
+	content: "• "; /* Adiciona um marcador personalizado */
+	color: gold; /* Cor do marcador */
+	margin-right: 5px; /* Adiciona espaço à direita do marcador */
+}
+/*RODAPÉ*/
+footer {
+	position: relative; /* Garante que o rodapé esteja posicionado corretamente */
+	padding-top: 0; /* Remove a margem superior do rodapé */
+	padding-bottom: 0; /* Remove o padding superior do rodapé */
+}
+.footer-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #000000;
+	color: #fff;
+	font-size: 20px;
+}
+.footer-content img {
+	margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+}
+/*TAGS*/
+body {
+	margin: 0;
+	padding: 0;
+}
+p{
+	padding-bottom: 5px;
+	margin: 20px 20px 20px 20px;
+	font-size: 24px;
+	font-family: "Sedan", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+a{
+	color: #fff;
+	text-decoration: underline;
+}
+a:hover {
+	opacity: 0.9; /* Reduzir a opacidade */
+	color: gold;
+}
+a.active{
+	font-weight: bold;
+}
